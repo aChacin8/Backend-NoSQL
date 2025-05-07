@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/aChacin8/Backend-NoSQL.git"
   },
-  "keywords": ["NoSQL", "Express", "Backend", "Software"],
+  "keywords": [
+    "NoSQL",
+    "Express",
+    "Backend",
+    "Software"
+  ],
   "author": "Alejandro Chacín",
   "license": "ISC",
   "bugs": {
@@ -20,8 +25,9 @@
   "homepage": "https://github.com/aChacin8/Backend-NoSQL#readme",
   "description": "It is a backend project that uses NodeJs and connects to a Mongo database.",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "mogoose": "^0.0.1-security"
+    "mongoose": "^8.14.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
