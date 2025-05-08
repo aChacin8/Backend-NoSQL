@@ -1,4 +1,10 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+const path = require('path');  
+
+const envPath = path.resolve(process.cwd(),`.env.${process.env.NODE_ENV||'development'}` )
+console.log('Enviroment', process.env.NODE_ENV);
+
+dotenv.config({path: envPath});
 
 const port = process.env.PORT || 3000;
 const appUri = process.env.URI_APP;
