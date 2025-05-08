@@ -4,6 +4,7 @@ const mongoURI = `${mongoDomain}${mongoUser}:${mongoPassword}@${mongoDatabase}`;
 
 const connectDB = async () => {
     try {
+        console.log("Mongo URI:", mongoURI);
 
         await mongo.connect(mongoURI);
         
