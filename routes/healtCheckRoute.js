@@ -7,7 +7,7 @@ const healthCheck = (req, res) => {
         statuss:'ok',
         message: 'Server is running...'
     })
-}
+} //Compreuba que el servidor funciona correctamente
 
 router.get(`/healthcheck`, healthCheck);
 
