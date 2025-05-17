@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "dev": "cross-env NODE_ENV=development nodemon app.js",
-  "start": "cross-env NODE_ENV=production node app.js",
-  "test": "cross-env NODE_ENV=test node app.js"
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
+    "test": "cross-env NODE_ENV=test node app.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,12 @@
   "homepage": "https://github.com/aChacin8/Backend-NoSQL#readme",
   "description": "It is a backend project that uses NodeJs and connects to a Mongo database.",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "cross-env": "^7.0.3",
     "dotenv": "^16.5.0",
     "eslint": "^9.26.0",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.14.1"
   },
   "devDependencies": {
