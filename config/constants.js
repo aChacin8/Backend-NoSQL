@@ -8,6 +8,7 @@ dotenv.config({path: envPath});
 
 const port = process.env.PORT || 3000;
 const appUri = process.env.URI_APP;
+const keyToken = process.env.JWT_SECRET
 
 const mongoDomain = process.env.MONGO_DOMAIN;
 const mongoUser = process.env.MONGO_USER;
