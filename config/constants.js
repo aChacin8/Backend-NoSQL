@@ -21,5 +21,6 @@ module.exports = {
   mongoDomain,
   mongoUser,
   mongoPassword,
-  mongoDatabase
+  mongoDatabase,
+  keyToken
 };
