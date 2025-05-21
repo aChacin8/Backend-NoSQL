@@ -9,6 +9,6 @@ const healthCheck = (req, res) => {
     })
 } //Compreuba que el servidor funciona correctamente
 
-router.get(`/healthcheck`, healthCheck);
+router.get('/healthcheck', healthCheck);
 
 module.exports = router;
