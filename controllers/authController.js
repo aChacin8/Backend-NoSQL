@@ -1,7 +1,7 @@
 const ModelUser = require ('../models/Users');
-const jwt = require ('jsonwebtoken')
-const {keyToken} = require ('../config/constants')
-const bcrypt = require ('bcryptjs')
+const jwt = require ('jsonwebtoken');
+const {keyToken} = require ('../config/constants');
+const bcrypt = require ('bcryptjs');
 
 const generateToken = (id) => {
     return jwt.sign({id}, keyToken, {expiresIn: '8d'});
