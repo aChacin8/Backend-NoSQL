@@ -15,6 +15,9 @@ const mongoUser = process.env.MONGO_USER;
 const mongoPassword = process.env.MONGO_PASSWORD;
 const mongoDatabase = process.env.MONGO_NAME_DB;
 
+const firebaseBucket = process.env.FIREBASE_BUCKET;
+const googleCredentials = process.env.GOOGLE_CREDENTIALS;
+
 module.exports = {
   port,
   appUri,
