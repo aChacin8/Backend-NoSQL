@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const path = require('path');  
 
+
 const envPath = path.resolve(process.cwd(),`.env.${process.env.NODE_ENV||'development'}` )
 console.log('Enviroment', process.env.NODE_ENV);
 
@@ -25,5 +26,7 @@ module.exports = {
   mongoUser,
   mongoPassword,
   mongoDatabase,
-  keyToken
+  keyToken,
+  firebaseBucket,
+  googleCredentials
 };
