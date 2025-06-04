@@ -24,9 +24,6 @@
   },
   "homepage": "https://github.com/aChacin8/Backend-NoSQL#readme",
   "description": "It is a backend project that uses NodeJs and connects to a Mongo database.",
-  "jest": {
-    "testEnvironment": "node"
-  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "celebrate": "^15.0.3",
