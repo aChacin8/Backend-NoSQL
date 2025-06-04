@@ -1,5 +1,4 @@
 const admin = require('firebase-admin');
-const multer = require ('multer')
 const {firebaseBucket, googleCredentials} = require('./constants');
 
 admin.initializeApp({
