@@ -13,7 +13,7 @@ const registerUser = async (req,res) => {
     const userExist = await ModelUser.findOne({email});
 
     if (userExist){
-        res.status(400).json({message: 'User already exist'}) 
+        res.status(400).json({error: 'User already exist'}) 
     }
 
     const user = await ModelUser.create({

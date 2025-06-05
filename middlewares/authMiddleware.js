@@ -13,7 +13,7 @@ const authMiddleware = async (req, res, next) => {
             req.user = await ModelUser.findById (decode.id).select('-password');
             next();
         } catch (error) {
-            res.status(401).json({message: 'Not authorized, token failed'})
+            res.status(401).json({error: 'Not authorized, token failed'})
         }
     }
 

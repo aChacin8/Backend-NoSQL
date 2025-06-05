@@ -3,12 +3,15 @@ const ModelUser = require  ('../models/Users');
 
 const createPost = async (req, res) => {
     const {title, description, user} = req.body
+    if (!title || !description) {
+        res.status(400).json({ error: 'Title and content are required' });
+    }
 
     const userId = await ModelUser.findById(user)
-        
     if (!userId){
-        res.status(400).json({message: `El usuario con ID ${user}`})
+        res.status(400).json({error: `El usuario con ID ${user} no existe`})
     }
+    
     try {
         const post = new ModelPost({
             title,
@@ -16,9 +19,9 @@ const createPost = async (req, res) => {
             userId: user
         })
         await post.save()
-        res.status(200).json(`Post ${post.title} created`)
+        res.status(201).json(`Post ${post.title} created`)
     } catch (error) {
-        res.status(400).json({message: error.message})
+        res.status(400).json({error: error.message})
     }
 }
 
@@ -27,7 +30,7 @@ const getAllPost = async (req, res) => {
         const post = await ModelPost.find()
         res.status(200).json(post)
     } catch (error) {
-        res.status(500).json({message: error.message})
+        res.status(500).json({error: error.message})
     }
 }
 

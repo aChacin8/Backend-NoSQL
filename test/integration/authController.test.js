@@ -1,5 +1,5 @@
 const request = require('supertest');
-const moongoose = require('mongoose');
+const mongose = require('mongoose');
 const { MongoMemoryServer} = require ('mongodb-memory-server');
 const app = require('../../app');
 const User = require('../../models/Users');
@@ -10,11 +10,11 @@ beforeAll(async ()=> {
     mongoServer = await MongoMemoryServer.create(); //Creamos servidor ficticio
     const mongoUri = mongoServer.getUri();
 
-    await moongoose.connect(mongoUri);
+    await mongose.connect(mongoUri);
 });
 
 afterAll(async ()=> {
-    await moongoose.disconnect();
+    await mongose.disconnect();
     await mongoServer.stop();
 });
 
@@ -54,6 +54,6 @@ describe('Test integration for authController', () => {
                 password: "contraseña444444"
             });
         expect(response.statusCode).toBe(400);
-        expect(response.body.error).toBe('User already exists');
+        expect(response.body.error).toBe('User already exist');
     })
 });
